@@ -34,9 +34,18 @@ This guide walks you through importing the forecast data and building the dashbo
 - **Card 1**: Total Actual Sales (Historical)
 - **Card 2**: Total Forecasted Sales (Next 12 Months)
 
-### 4. Slicers
-- Add a **Date Slicer** to filter by year/month.
-- If your CSV includes `Category` or `Region`, add slicers for those to allow dynamic filtering (Note: The basic Prophet model in this example might be an aggregate forecast. for granular filtering, you would need to generate forecasts per category).
+### 4. Slicers (Dynamic Filtering)
+This model now supports granular forecasting!
+- **Region Slicer**:
+    - Drag the `Region` column to the report canvas.
+    - Click the visual and change it to a **Slicer**.
+- **Category Slicer**:
+    - Drag the `Category` column to the report canvas.
+    - Change it to a **Slicer**.
+
+**How it works**:
+- When you select a specific Region or Category, the "Actual vs Forecast" chart will update to show predictions for *that specific segment* only.
+- If no selection is made, it might show a sum of all forecasts (which is also useful!).
 
 ## Step 4: Polish and Publish
 - Add a title: "Sales Forecasting Dashboard".
